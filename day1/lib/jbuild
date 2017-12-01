@@ -1,0 +1,7 @@
+
+(jbuild_version 1)
+
+(library (
+  (name day1)
+  (public_name day1)
+  (libraries (core))))
