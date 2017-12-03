@@ -1,0 +1,8 @@
+### Starting build.
+# Target: part1.ml.depends, tags: { bin_annot, debug, extension:ml, file:part1.ml, ocaml, ocamldep, package(core), ppx(ppx-jane -as-ppx), quiet, short_paths, thread }
+ocamlfind ocamldep -package core -ppx 'ppx-jane -as-ppx' -modules part1.ml > part1.ml.depends
+# Target: part1.cmo, tags: { bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:part1.cmo, file:part1.ml, implem, ocaml, package(core), ppx(ppx-jane -as-ppx), quiet, short_paths, thread }
+ocamlfind ocamlc -c -w A-4-33-40-41-42-43-34-44 -strict-sequence -g -bin-annot -short-paths -thread -package core -ppx 'ppx-jane -as-ppx' -o part1.cmo part1.ml
+# Target: part1.byte, tags: { bin_annot, byte, debug, dont_link_with, extension:byte, file:part1.byte, link, ocaml, package(core), ppx(ppx-jane -as-ppx), program, quiet, short_paths, thread }
+ocamlfind ocamlc -linkpkg -g -thread -package core part1.cmo -o part1.byte
+# Compilation successful.
