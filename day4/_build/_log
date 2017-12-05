@@ -1,0 +1,15 @@
+### Starting build.
+# Target: part2.ml.depends, tags: { bin_annot, debug, extension:ml, file:part2.ml, ocaml, ocamldep, package(core), ppx(ppx-jane -as-ppx), quiet, short_paths, thread }
+ocamlfind ocamldep -package core -ppx 'ppx-jane -as-ppx' -modules part2.ml > part2.ml.depends
+# Target: utils.ml.depends, tags: { bin_annot, debug, extension:ml, file:utils.ml, ocaml, ocamldep, package(core), ppx(ppx-jane -as-ppx), quiet, short_paths, thread }
+ocamlfind ocamldep -package core -ppx 'ppx-jane -as-ppx' -modules utils.ml > utils.ml.depends # cached
+# Target: utils.cmo, tags: { bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:utils.cmo, file:utils.ml, implem, ocaml, package(core), ppx(ppx-jane -as-ppx), quiet, short_paths, thread }
+ocamlfind ocamlc -c -w A-4-33-40-41-42-43-34-44 -strict-sequence -g -bin-annot -short-paths -thread -package core -ppx 'ppx-jane -as-ppx' -o utils.cmo utils.ml # cached
+# Target: part2.cmo, tags: { bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:part2.cmo, file:part2.ml, implem, ocaml, package(core), ppx(ppx-jane -as-ppx), quiet, short_paths, thread }
+ocamlfind ocamlc -c -w A-4-33-40-41-42-43-34-44 -strict-sequence -g -bin-annot -short-paths -thread -package core -ppx 'ppx-jane -as-ppx' -o part2.cmo part2.ml
++ ocamlfind ocamlc -c -w A-4-33-40-41-42-43-34-44 -strict-sequence -g -bin-annot -short-paths -thread -package core -ppx 'ppx-jane -as-ppx' -o part2.cmo part2.ml
+File "part2.ml", line 14, characters 10-12:
+Warning 27: unused variable tl.
+# Target: part2.byte, tags: { bin_annot, byte, debug, dont_link_with, extension:byte, file:part2.byte, link, ocaml, package(core), ppx(ppx-jane -as-ppx), program, quiet, short_paths, thread }
+ocamlfind ocamlc -linkpkg -g -thread -package core utils.cmo part2.cmo -o part2.byte
+# Compilation successful.
