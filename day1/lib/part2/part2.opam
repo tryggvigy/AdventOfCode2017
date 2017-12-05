@@ -1,0 +1,15 @@
+opam-version: "2.0"
+name: "part2"
+version: "1.0.0"
+maintainer: "Tryggvi Gylfason <tryggvi@spotify.com>"
+authors: ["Tryggvi Gylfason <tryggvi@spotify.com>"]
+homepage: ""
+bug-reports: ""
+dev-repo: ""
+license: ["ISC"]
+tags: []
+build: [["jbuilder" "build" "-p" name "-j" jobs]]
+build-test: [["jbuilder" "runtest" "-p" name "-j" jobs]]
+depends: [
+  "jbuilder" {build}
+]
